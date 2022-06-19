@@ -9,29 +9,326 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"  rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
 </head>
 <body>
+    <div class="modal__alert modal__hidden">
+        <div class="modal__alert-content">
+            <img src="images/ok.svg" alt="ok">
+            <h3>Большое спасибо <br> за заказ!</h3>
+            <p>Ваш заказ получен и находится в обработке. В ближайшее время с Вами свяжется менеджер..</p>
+        </div>
+    </div>
+    <div class="modal modal__hidden">
+        <div class="modal-content">
+            <img src="images/ok.svg" alt="ok">
+            <h3>УЖЕ ЗВОНИМ!</h3>
+            <p>Ваше обращение получено. В ближайшее время с Вами свяжется менеджер.</p>
+        </div>
+    </div>
     <header class="header">
+        <div class="header__menu--adaptiv">
+            <div class="close"><img src="images/close-burger.svg" alt=""></div> 
+            <ul class="header__menu-list ">
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#working">Этапы работ</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#calc">Калькулятор</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#examples">Примеры работ</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#consultation">Контакты</a></li>
+            </ul>
+        </div>
+       
             <div class="header__top">                
+                <div class="burger__menu"><img src="images/menu.svg" alt=""></div>
                 <a href="tel:+74951222305" class="header__top-phone">+7 495 122 23 05</a>
-           
             </div>
+  
+            
             <div class="header-block">
                 <h1 class="header-block__title">Почистим мебель
                     или <span>вернем деньги</span> </h1>
                 <p class="header-block__text">Химчистка мебели <span>от 999 руб.</span></p>
             </div>
             <div class="header__menu">
-            <ul class="header__menu-list">
-                <li class="header__menu-item"><a href="#">Калькулятор</a></li>
-                <li class="header__menu-item"><a href="#">Этапы работ</a></li>
-                <li class="header__menu-item"><a href="#">Примеры работ</a></li>
-                <li class="header__menu-item"><a href="#">Отзывы</a></li>
-                <li class="header__menu-item"><a href="#">Контакты</a></li>
+            <ul class="header__menu-list menu--hidden">
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#working">Этапы работ</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#calc">Калькулятор</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#examples">Примеры работ</a></li>
+                <li class="header__menu-item"><a class="header__menu-list__link" href="#consultation">Контакты</a></li>
             </ul>
             <button class="header__menu-btn">Вызвать мастера</button>
             </div>
     </header>
-    <script src="js/main.min.js"></script>
+
+ <section class="working" id="working">
+        <div class="container">
+            <h2 class="working__title">
+                Как мы почистим Вашу мебель?
+            </h2>
+
+            <div class="working__inner">
+                <div class="working__inner-content">
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked1.svg" alt="working">
+                        <p>Уберем пыль</p>
+                    </div>
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked2.svg" alt="working">
+                        <p>Нанесем средство</p>
+                    </div>
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked3.svg" alt="working">
+                        <p>Удалим пятна</p>
+                    </div>
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked4.svg" alt="working">
+                        <p>Почистим экстакцией</p>
+                    </div>
+                    <div class="working__inner-content__item">
+                        <img height="105" width="105" src="images/worked5.svg" alt="working">
+                        <p>Промоем ткань</p>
+                    </div>
+                </div>
+                <div class="working__inner-video">
+                    <iframe width="550" height="500" src="https://www.youtube.com/embed/ZT4cxzNSi8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price" id="calc">
+        <div class="container">
+            <h2 class="price__title">Сколько это стоит?</h2>
+            <p class="price__text">Сделайте расчет в удобном калькуляторе! Выберите кол-во и цена
+            автоматически посчитается</p>
+            <div class="price__content">
+            <div class="price__items">
+                <div class="price-item" data-id="1">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa1.png" alt="sofa"></div>
+                        <span class="item-price">990₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">ДИВАН 2 места</span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="2">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa2.png" alt="sofa"></div>
+                        <span class="item-price">1990₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">ДИВАН 3 места </span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="3">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa3.png" alt="sofa"></div>
+                        <span class="item-price">3390₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">ДИВАН угловой </span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="4">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa4.png" alt="sofa"></div>
+                        <span class="item-price">2890₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">СПАЛЬНОЕ место </span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="5">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa5.png" alt="sofa"></div>
+                        <span class="item-price">850₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">КРЕСЛО </span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="6">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa6.png" alt="sofa"></div>
+                        <span class="item-price">770₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">CТУЛ</span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="7">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa7.png" alt="sofa"></div>
+                        <span class="item-price">1530₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">МАТРАС 1 спальный</span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="8">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa8.png" alt="sofa"></div>
+                        <span class="item-price">1800₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">МАТРАС 2 спальный</span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="9">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa9.png" alt="sofa"></div>
+                        <span class="item-price">550₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">ПУФИК </span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="price-item" data-id="10">
+                    <div class="price-item__left-block">
+                        <div class="price-item__img-block"><img src="images/sofa10.png" alt="sofa"></div>
+                        <span class="item-price">1690₽</span>
+                    </div>
+                    <div class="price-item__right-block">
+                        <span class="item-name">КОВЕР ковролин </span>
+                        <div class="price-item__counter">
+                            <button class="item-dec__btn">-</button>
+                            <span class="counter__span">0</span>
+                            <button class="item-inc__btn">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price-check__block">
+                <h3 class="price-check__block-title">ВАШ ЗАКАЗ</h3>
+                <div class="price-check__items">
+                    
+                </div>
+                <div class="price-check__total">
+                    <p>Итог:</p>
+                    <span>0 руб.</span>
+                    
+                </div>
+               <form action="#">
+                <input required class="phone__input" placeholder="+7 (000) XXX XX XX " type="tel">
+                <button type="submit">Заказать</button>
+               </form>
+                
+            </div>
+        </div>
+        </div>
+    </section>
+   
+    <section class="slider" id="examples">
+        <div class="container">
+            <div class="slider__content">
+                <img src="images/girl.png" alt="girl">
+                <div>
+                    <h2 class="slider__title">Сомнения? Тогда вот наши фото</h2>
+            <p class="slider__text">Все фотографии сделаны мастерами в момент химчистки. Конечно же с позволения любимого клиента. </p>
+                </div>
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slider__item">
+                        <img src="images/befandaft.png" alt="beforeAndAfterImg">
+                    </div>
+                    <div class="swiper-slide slider__item">
+                        <img src="images/befandaft.png" alt="beforeAndAfterImg">
+                    </div>
+                    <div class="swiper-slide slider__item">
+                        <img src="images/befandaft.png" alt="beforeAndAfterImg">
+                    </div>
+                    <div class="swiper-slide slider__item">
+                        <img src="images/befandaft.png" alt="beforeAndAfterImg">
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+                
+        </div>
+        </section>
+
+        <section class="consultation" id="consultation">
+            <div class="container">
+                <h2 class="consultation__title">Хотите проконсультироваться?</h2>
+                <form action="#">
+                    <input class="consultation__input" type="tel" placeholder="+7 (000) XXX XX XX ">
+                    <button class="consultation__btn">Позвоните мне</button>
+                </form>
+                <p>Оставьте свой номер телефона, и мы сразу с вами свяжемся. Окажем профессиональную консультацию.
+                    Совершенно бесплатно, ведь за совет денег не берут.</p>
+            </div>
+        </section>
+     
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__inner-content">
+                        <h3>Cotsy.ru</h3>
+                        <p>Делаем мебель чистой</p>
+                        <span>Офис: Москва, ул. Угрешская, дом 2, стр.1</span>
+                    </div>
+                    <div class="footer__inner-contacts">
+                        <h3>Контакты</h3>
+                        <a class="footer__email" href="mailto:fb@cotsy.ru">fb@cotsy.ru</a>
+                        <a class="footer__phone" href="tel:+74950000000">+7 (495) 000 00 00</a>
+                        <a href="#" class="footer__btn">Написать руководству</a>
+                    </div>
+                </div>
+            </div>
+        </footer>  
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
